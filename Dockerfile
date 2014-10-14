@@ -2,7 +2,7 @@ FROM debian:wheezy
 MAINTAINER Quang Pham  "me@quangpham.com"
 
 RUN apt-get update
-RUN yum install -y squid
+RUN apt-get install -y squid
 ADD squid.conf /etc/squid/squid.conf
 # Make cache dirs 
 RUN squid -z -F
